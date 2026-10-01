@@ -7,7 +7,8 @@ Last verified: 2026-10-01.
 - `src/content.mjs` owns session, speaker and route metadata.
 - `src/server/render.mjs` renders every public route with `what-framework/server`, including direct session/speaker pages and root `404.html`.
 - `src/client/main.jsx` mounts the agenda island; browser JSX is not imported by the Node renderer.
-- `scripts/build.mjs` validates `SITE_URL`, writes static HTML, sitemap, robots and `dist/manifest.json`.
+- `scripts/build.mjs` validates `SITE_URL` and writes static HTML, sitemap and robots output under `dist/static`.
+- `scripts/check.mjs` validates the emitted Vura route manifest with `@celsian/vura-contract`.
 
 ## What Framework patterns
 
@@ -22,6 +23,7 @@ Last verified: 2026-10-01.
 - Storage APIs can throw in locked-down contexts, so agenda reads/writes use safe wrappers and a tab-local memory fallback.
 - ICS export is generated locally from fictional sessions; there is no ticketing, sync, analytics or external calendar API.
 - The refined home page now exposes the next session and schedule rows immediately; it avoids relying on a poster graphic as the primary event object.
+- Vura upload rejected the first handwritten static manifest because it lacked required `timestamp` and `pages[].filePath` fields. The starter now emits the full manifest contract and maps each route to its promoted public file via `config.staticKey`.
 
 ## Reference snippets
 
