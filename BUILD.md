@@ -24,6 +24,7 @@ Last verified: 2026-10-01.
 - ICS export is generated locally from fictional sessions; there is no ticketing, sync, analytics or external calendar API.
 - The refined home page now exposes the next session and schedule rows immediately; it avoids relying on a poster graphic as the primary event object.
 - Vura upload rejected the first handwritten static manifest because it lacked required `timestamp` and `pages[].filePath` fields. The starter now emits the full manifest contract and maps each route to its promoted public file via `config.staticKey`.
+- Linux CI caught a 390px `/build` overflow that macOS system fonts did not reproduce. Grid children now opt into `min-width: 0`, build panels wrap long inline code text, and the smoke test forces a wider fallback font on `/build` without loosening the viewport assertion.
 
 ## Reference snippets
 
