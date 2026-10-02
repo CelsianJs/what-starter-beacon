@@ -84,3 +84,8 @@
 - Move away from a toy-like poster graphic and make the agenda density visible immediately.
 - Lead with conference IA: next session, topic filters, timezone context and schedule rows should be visible early.
 - Keep the citrus/ultramarine identity, but make it feel like a real conference app with fast scanning and useful session hierarchy.
+
+## Refinement notes — 2026-10-02 Opus review
+- Filter chips now visibly respond to `aria-pressed`, with focus styles preserved for keyboard use.
+- Static and client agendas are grouped by day, and time labels use non-wrapping timezone-aware text on home and agenda routes.
+- Whole-row session links no longer underline every field; titles carry the hover/focus affordance and saved rows get the stronger shadow.

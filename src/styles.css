@@ -2,3 +2,20 @@
 
 .agenda-lead{grid-template-columns:minmax(0,.8fr) minmax(340px,1.2fr);align-items:stretch;padding-top:34px}.agenda-lead h1{font-size:clamp(2.8rem,7vw,6.2rem);max-width:10ch}.next-card{display:grid;align-content:start;gap:10px;box-shadow:8px 8px 0 var(--pink)}.next-card time{font-weight:1000;color:var(--blue)}.schedule{margin-top:12px}.session{box-shadow:6px 6px 0 var(--blue)}
 @media(max-width:820px){.agenda-lead{grid-template-columns:1fr}.agenda-lead h1{max-width:100%;font-size:clamp(2.7rem,16vw,4.8rem)}.next-card{width:100%;margin-top:8px}.session{grid-template-columns:1fr}.schedule{margin-top:18px}}
+
+button[aria-pressed=true]{background:var(--ink);color:var(--citrus);box-shadow:4px 4px 0 var(--pink)}
+.filter-row{display:flex;gap:16px;align-items:end;justify-content:space-between;flex-wrap:wrap}
+.day-group{display:grid;gap:12px}
+.day-group h2{font-size:clamp(1.45rem,3vw,2.4rem);line-height:1;margin:0}
+.schedule{gap:24px}
+.session{text-decoration:none;grid-template-columns:190px minmax(0,1fr) auto;box-shadow:none}
+.session h3{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px}
+.session:hover h3,.session:focus-visible h3{text-decoration-color:var(--ink)}
+.session:focus-visible{outline:4px solid var(--pink);outline-offset:4px}
+.session time,.next-card time{white-space:nowrap;font-weight:1000;color:var(--blue);font-size:.95rem}
+.details-pill{border:2px solid var(--ink);border-radius:18px;padding:.65rem .9rem;font-weight:900;background:var(--citrus)}
+.saved-session{box-shadow:6px 6px 0 var(--pink)}
+.panel,.speaker{box-shadow:6px 6px 0 rgba(18,55,255,.65)}
+.next-card{box-shadow:8px 8px 0 var(--pink)}
+
+@media(max-width:820px){.filter-row{display:grid;align-items:start}.session{grid-template-columns:1fr}}
