@@ -10,8 +10,10 @@ button[aria-pressed=true]{background:var(--ink);color:var(--citrus);box-shadow:4
 .schedule{gap:24px}
 .session{text-decoration:none;grid-template-columns:190px minmax(0,1fr) auto;box-shadow:none}
 .session h3{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px}
-.session:hover h3,.session:focus-visible h3{text-decoration-color:var(--ink)}
-.session:focus-visible{outline:4px solid var(--pink);outline-offset:4px}
+.session:hover h3,.session:focus-visible h3,.session-title-link:hover h3,.session-title-link:focus-visible h3{text-decoration-color:var(--ink)}
+.session:focus-visible,.session-title-link:focus-visible{outline:4px solid var(--pink);outline-offset:4px}
+.session-title-link{display:inline-grid;gap:.2rem;color:inherit;text-decoration:none}
+.session-title-link span{font-size:.72rem;font-weight:950;letter-spacing:.13em;text-transform:uppercase;color:var(--blue)}
 .session time,.next-card time{white-space:nowrap;font-weight:1000;color:var(--blue);font-size:.95rem}
 .details-pill{border:2px solid var(--ink);border-radius:18px;padding:.65rem .9rem;font-weight:900;background:var(--citrus)}
 .saved-session{box-shadow:6px 6px 0 var(--pink)}

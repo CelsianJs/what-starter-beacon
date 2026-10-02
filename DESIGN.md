@@ -88,4 +88,4 @@
 ## Refinement notes — 2026-10-02 Opus review
 - Filter chips now visibly respond to `aria-pressed`, with focus styles preserved for keyboard use.
 - Static and client agendas are grouped by day, and time labels use non-wrapping timezone-aware text on home and agenda routes.
-- Whole-row session links no longer underline every field; titles carry the hover/focus affordance and saved rows get the stronger shadow.
+- Static session rows can be whole-card links, but mounted agenda rows use a title/details anchor beside a separate Save button so navigation and saving stay distinct keyboard targets.
