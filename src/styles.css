@@ -17,6 +17,7 @@ button[aria-pressed=true]{background:var(--ink);color:var(--citrus);box-shadow:4
 .session time,.next-card time{white-space:nowrap;font-weight:1000;color:var(--blue);font-size:.95rem}
 .details-pill{border:2px solid var(--ink);border-radius:18px;padding:.65rem .9rem;font-weight:900;background:var(--citrus)}
 .saved-session{box-shadow:6px 6px 0 var(--pink)}
+.session-detail{align-items:start}.session-detail h1{font-size:clamp(3rem,7vw,6rem);line-height:.92}.session-detail h2{font-size:2rem;line-height:1}.session-detail li{line-height:1.6}.selected-session{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:22px}.selected-session p{font-weight:800}
 .panel,.speaker{box-shadow:6px 6px 0 rgba(18,55,255,.65)}
 .next-card{box-shadow:8px 8px 0 var(--pink)}
 

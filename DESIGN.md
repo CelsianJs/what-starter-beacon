@@ -1,8 +1,12 @@
 # Design
 
+## Product-depth refinement — 2026-10-07
+
+Session pages now contain an abstract, outcomes, audience and format, with direct speaker links. Speaker pages list their own sessions. `?session=slug` offers an explicit local save, and saved-only view distinguishes a personal agenda from topic filtering. Calendar export downloads a real local .ics file while preserving inspectable preview. Detail panels retain citrus/ultramarine/pink rather than using repeated bursts.
+
 ## Source of truth
 - Status: Active
-- Last refreshed: 2026-10-01
+- Last refreshed: 2026-10-07
 - Primary product surfaces: Conference front, agenda, session detail, speaker detail, build journal, not-found page.
 - Evidence reviewed: Starter brief; sibling What/Vura starter pattern.
 
