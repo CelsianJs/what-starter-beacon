@@ -1,6 +1,12 @@
 # Build journal
 
-Last verified: 2026-10-01.
+## Product-depth patterns — 2026-10-07
+
+`src/calendar.mjs` exports pure `makeIcs(items, generatedAt)`. It writes UTC start/end stamps, stable session ids, actual generation DTSTAMP, escaped text, CRLF separators and UTF-8-aware 75-octet line folding. The old textarea-only export promised a file without providing one. The client now creates a `text/calendar` Blob, activates an anchor with `download='beacon-agenda.ics'`, then revokes the object URL after a short delay; preview remains available. Save changes clear stale preview. Query-selected sessions are resolved against known records and are never silently saved. Product-depth checks cover Unicode folding and timestamps; browser tests await a real download and verify saved-only results at1440/390. Static schedule and session/speaker relationships remain readable without JavaScript.
+
+Verification: `npm test` runs content/model regressions, production artifact checks, contextual browser flows, desktop/mobile screenshots and the original smoke suite. Screenshot proof is under `.screenshots/`; no external services are required.
+
+Last verified: 2026-10-07.
 
 ## Architecture
 
