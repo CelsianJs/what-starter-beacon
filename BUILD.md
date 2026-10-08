@@ -1,5 +1,11 @@
 # Build journal
 
+## Contemporary interface baseline — 2026-10-08
+
+The stylesheet is consolidated around a shared local sans-serif stack, explicit 16px body and 14px control typography, 44px minimum button/input/navigation targets and an 8px spacing rhythm. Headings stop at 48px on desktop and 32px on mobile across product, detail and build routes. Source content, client state, routes, local persistence and file-download semantics are unchanged. Quiet borders replace decorative backgrounds, heavy outlines and offset shadows; the original content objects remain the focal point.
+
+Visual verification covers 1440×1000 and 390×844 primary, detail, interactive and build surfaces, horizontal geometry, focus, source-native controls and no-JavaScript content. `npm test` runs content regressions, production build checks, existing browser/smoke flows and then the shared typography/geometry contract through `npm run test:style`. The existing CI `npm test` step runs this mandatory gate too; no optional or skipped style check is used. To rerun style checks independently, run `npm run build` followed by `npm run test:style`. No new dependencies or external font requests are needed.
+
 ## Product-depth patterns — 2026-10-07
 
 `src/calendar.mjs` exports pure `makeIcs(items, generatedAt)`. It writes UTC start/end stamps, stable session ids, actual generation DTSTAMP, escaped text, CRLF separators and UTF-8-aware 75-octet line folding. The old textarea-only export promised a file without providing one. The client now creates a `text/calendar` Blob, activates an anchor with `download='beacon-agenda.ics'`, then revokes the object URL after a short delay; preview remains available. Save changes clear stale preview. Query-selected sessions are resolved against known records and are never silently saved. Product-depth checks cover Unicode folding and timestamps; browser tests await a real download and verify saved-only results at1440/390. Static schedule and session/speaker relationships remain readable without JavaScript.
