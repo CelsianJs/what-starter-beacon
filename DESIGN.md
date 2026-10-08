@@ -2,11 +2,11 @@
 
 ## Product-depth refinement — 2026-10-07
 
-Session pages now contain an abstract, outcomes, audience and format, with direct speaker links. Speaker pages list their own sessions. `?session=slug` offers an explicit local save, and saved-only view distinguishes a personal agenda from topic filtering. Calendar export downloads a real local .ics file while preserving inspectable preview. Detail panels retain citrus/ultramarine/pink rather than using repeated bursts.
+Session pages now contain an abstract, outcomes, audience and format, with direct speaker links. Speaker pages list their own sessions. `?session=slug` offers an explicit local save, and saved-only view distinguishes a personal agenda from topic filtering. Calendar export downloads a real local .ics file while preserving inspectable preview. The current baseline keeps ultramarine as the action/focus accent and removes the historical citrus/pink decoration.
 
 ## Source of truth
 - Status: Active
-- Last refreshed: 2026-10-07
+- Last refreshed: 2026-10-08
 - Primary product surfaces: Conference front, agenda, session detail, speaker detail, build journal, not-found page.
 - Evidence reviewed: Starter brief; sibling What/Vura starter pattern.
 
@@ -32,16 +32,16 @@ Session pages now contain an abstract, outcomes, audience and format, with direc
 
 ## Design principles
 - Principle 1: Make the schedule the product, not a hidden secondary page.
-- Principle 2: Color can be loud if hierarchy and controls stay legible.
+- Principle 2: Color marks action and selection; the agenda owns the visual hierarchy.
 - Tradeoffs: ICS is text-exported locally rather than integrated with external calendar services.
 
 ## Visual language
-- Color: Citrus yellow, ultramarine, pink accents, cream paper.
-- Typography: Heavy system sans with compressed, energetic headlines.
-- Spacing/layout rhythm: Chunky schedule rows, badges, high-contrast panels.
-- Shape/radius/elevation: Rounded panels with visible offset shadows.
+- Color: White background, graphite text, muted gray, ultramarine action/focus accent and quiet blue-gray surfaces.
+- Typography: Avenir Next / Segoe UI Variable / Segoe UI / sans-serif; 16px body at 1.6 line height, 14px chrome/time labels and bounded 48px desktop / 32px mobile headings.
+- Spacing/layout rhythm: 8px rhythm, flat day-grouped schedule rows, balanced hero and compact session summaries.
+- Shape/radius/elevation: 6px controls/panels, light dividers, no decorative offset shadows.
 - Motion: Minimal hover/focus transitions; reduced motion disables movement.
-- Imagery/iconography: CSS burst shapes and colored schedule blocks; no remote assets.
+- Imagery/iconography: Source-native text schedule and time labels; no burst shapes or remote assets.
 
 ## Components
 - Existing components to reuse: What signals/computed/effects, static server renderer, Vura scripts.
